@@ -1,0 +1,84 @@
+.headerContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.headerPhoto {
+  width: 50%;
+  height: 100%;
+  background-image: url("../../assets/Home-Hero-Image.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.headerMenu {
+  width: 50%;
+  a {
+    text-decoration: none;
+    color: map_get($colors, navText)
+  }
+  color: map_get($colors, navText)
+}
+
+.headerNav {
+  text-align: end;
+  margin-top: 1.8rem;
+  margin-right: 4rem;
+  a{
+    text-decoration: none;
+    color: map_get($colors, navText)
+  }
+  a:hover {
+    border: 0.75px solid map_get($colors, loginText);
+  }
+}
+
+.loginDiv {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  a {
+    margin-left: 1.8rem;
+    margin-bottom: 2rem;
+    color: map_get($colors, loginText);
+    padding: 5px;
+  }
+  a:hover {
+    border: 0.75px solid map_get($colors, loginBorder);
+  }
+}
+
+.navDiv {
+  font-size: 1rem;
+  a {
+    margin-left: 1rem;
+    padding: 5px;
+    font-weight: lighter;
+  }
+}
+
+.headerHeading {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 10rem;
+  margin-right: 4rem;
+  h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.76px;
+    font-weight: lighter;
+  }
+  button:last-child {
+    margin-left: 3rem;
+  }
+  //a {
+  //  border: 0.75px solid map_get($colors, loginText);
+  //  text-transform: uppercase;
+  //  font-size: 1.4rem;
+  //  padding: 10px;
+  //}
+  img {
+    width: 11rem;
+    margin: 1rem 0 2rem 0;
+  }
+}

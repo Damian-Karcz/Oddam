@@ -1,0 +1,33 @@
+#fourStepSection {
+  text-align: center;
+  color: map_get($colors, navText);
+  h1 {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+}
+
+.fourStepsDiv {
+  background-color: map_get($colors, backgroundColor);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.oneStep {
+  margin: 4rem 0;
+  width: 7.5rem;
+  h2 {
+    padding: 0.2rem 0;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .border {
+    width: 3.5rem;
+    height: 1px;
+    background-color: map_get($colors, navText);
+    margin: 0.8rem auto;
+  }
+}

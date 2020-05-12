@@ -1,0 +1,57 @@
+.contactMain {
+  display: flex;
+  height: 75vh;
+  margin: 0 auto;
+
+}
+
+.backgroundImageDiv {
+  height: 100%;
+  width: 60%;
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+  background-size: cover;
+  text-align: center;
+  opacity: 20%;
+}
+
+.formDiv {
+  width: 40%;
+  text-align: center;
+  margin-top: 5rem;
+  margin-right: 5rem;
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  form {
+    text-align: left;
+    margin-left: 5rem;
+  }
+  label {
+    display: inline-grid;
+    margin-right: 1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  input, textarea {
+    border: none;
+    border-bottom: 1px solid #707070;
+    margin-top: 0.8rem;
+  }
+  textarea {
+    width: 23rem;
+    height: 5rem;
+    resize: none;
+  }
+  input[type=submit] {
+    padding: 1rem;
+    width: 6rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    border: 1px solid #707070;
+  }
+}
