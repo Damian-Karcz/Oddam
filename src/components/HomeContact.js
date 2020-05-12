@@ -1,7 +1,12 @@
 import React from "react";
 import decoration from "../assets/Decoration.svg";
+import facebookImg from "../assets/Facebook.svg"
+import instagramImg from "../assets/Instagram.svg"
 
 export default function HomeContact() {
+
+
+
     return (
         <>
             <section className="contactMain">
@@ -22,10 +27,17 @@ export default function HomeContact() {
                             <textarea placeholder="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."/>
                         </label>
                         <input className="buttonsHeader" type="submit" value="Wyślij"></input>
-
                     </form>
                 </div>
             </section>
+            <footer className="pageFooter">
+                <p>Copyright by Coders Lab</p>
+                <div>
+                    <img src={facebookImg}/>
+                    <img src={instagramImg}/>
+                </div>
+            </footer>
+
         </>
     )
 }
