@@ -1,5 +1,5 @@
 import React from 'react';
-import './scss/main.scss';
+import '../../scss/main.scss';
 import {HashRouter as Router, Route, Switch, } from 'react-router-dom';
 
 // import {
@@ -8,9 +8,11 @@ import {HashRouter as Router, Route, Switch, } from 'react-router-dom';
 //     Switch,
 // } from 'react-router-dom';
 
-import Home from "./components/Home";
-import LoginPage from "./components/LoginPage";
-import RegisterPage from "./components/RegisterPage";
+import Home from "../Home";
+import LoginPage from "../LoginPage";
+// import RegisterPage from "../RegisterPage";
+import SignUpPage from "../SignUp/SignUpPage";
+import SignInPage from "../SingIn/SingInPage";
 // import SignUpPage from "./components/SignUp";
 
 
@@ -23,10 +25,10 @@ function App() {
                   <Home/>
               </Route>
               <Route exact path="/login">
-                  <LoginPage/>
+                  <SignInPage/>
               </Route>
-              <Route exact path="/rejestracja">
-                  <RegisterPage/>
+              <Route exact path="/register">
+                  <SignUpPage/>
               </Route>
               {/*<Route path="/test" component={SignUpPage} />*/}
           </Switch>
