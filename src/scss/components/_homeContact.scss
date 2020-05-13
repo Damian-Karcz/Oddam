@@ -3,7 +3,17 @@
   background-image: url("../../assets/Background-Contact-Form.jpg");
   background-size: cover;
   text-align: center;
-  opacity: 20%;
+  position: relative;
+  &::before {
+    width: 100%;
+    position:absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background-color: rgba(255,255,255, 0.3)
+  }
 }
 
 .contactSection {
@@ -20,6 +30,7 @@
   text-align: center;
   margin-top: 5rem;
   margin-right: 5rem;
+  position: relative;
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -62,12 +73,13 @@
   justify-content: space-between;
   margin-top: 15rem;
   font-size: 0.8rem;
+  position: relative;
   div {
     display: flex;
     margin-right: 2rem;
     img {
       margin-right: 1rem;
-
     }
+
   }
 }

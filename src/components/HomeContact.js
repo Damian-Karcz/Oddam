@@ -22,9 +22,9 @@ export default function HomeContact() {
         e.preventDefault()
 
         const form = {
-            Name: name,
-            Email: email,
-            Message: message
+            name: name,
+            email: email,
+            message: message
         }
         const Api = "https://fer-api.coderslab.pl/v1/portfolio/contact";
         fetch(`${Api}`, {
@@ -63,8 +63,8 @@ export default function HomeContact() {
             <footer className="pageFooter">
                 <p>Copyright by Coders Lab</p>
                 <div>
-                    <a target="_blank" href="https://www.facebook.com/"><img src={facebookImg}/></a>
-                    <a href="https://www.instagram.com/?hl=pl"><img src={instagramImg}/></a>
+                    <a target="_blank" rel="noopener noreferrer"  href="https://www.facebook.com/"><img src={facebookImg} alt="Facebook Icon"/></a>
+                    <a href="https://www.instagram.com/?hl=pl"><img src={instagramImg} alt="Instagram Icon"/></a>
                 </div>
             </footer>
             </main>

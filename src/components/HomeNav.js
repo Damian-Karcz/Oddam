@@ -1,6 +1,5 @@
 import React from "react";
 import {Link} from "react-router-dom";
-// import {Link} from "react-scroll"
 import ScrollNav from "./ScrollNav";
 import * as ROUTES from "../constants/routes";
 

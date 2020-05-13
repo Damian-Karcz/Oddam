@@ -2,8 +2,12 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import decoration from "../assets/Decoration.svg";
 import HomeNav from "./HomeNav";
+import { withFirebase  } from './Firebase'
+import NavAfterLogIn from "./NavAfterLogIn";
 
-export default function Home() {
+function Home({firebase}) {
+
+    const isUser = firebase.getCurrentUser()
     return (
         <>
             <div className="headerContainer">
@@ -11,21 +15,7 @@ export default function Home() {
 
                 </div>
                 <div className="headerMenu">
-                    {/*<div className="headerNav">*/}
-                    {/*    <div className="loginDiv">*/}
-                    {/*        <Link to="/login">Zaloguj</Link>*/}
-                    {/*        <Link to="/register">Załóż konto</Link>*/}
-                    {/*    </div>*/}
-                    {/*    <div className="navDiv">*/}
-                    {/*        <Link to="/">Start</Link>*/}
-                    {/*        <Link to="/">O co chodzi?</Link>*/}
-                    {/*        <Link to="/">O nas</Link>*/}
-                    {/*        <Link to="/">Fundacje i organizacje</Link>*/}
-                    {/*        <Link to="/">Kontakt</Link>*/}
-                    {/*    </div>*/}
-
-                    {/*</div>*/}
-                    <HomeNav/>
+                    {isUser ? <NavAfterLogIn/> : <HomeNav/>}
                     <div className="headerHeading">
                         <h1>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce </h1>
                         <img src={decoration} alt="Decoration Border"/>
@@ -43,3 +33,4 @@ export default function Home() {
         </>
     )
 }
+        export default withFirebase(Home)

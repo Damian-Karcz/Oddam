@@ -19,6 +19,8 @@ class Firebase {
 
     // *** Auth API ***
 
+    getCurrentUser = () => this.auth.currentUser?.email
+
     doCreateUserWithEmailAndPassword = (email, password) =>
         this.auth.createUserWithEmailAndPassword(email, password);
 

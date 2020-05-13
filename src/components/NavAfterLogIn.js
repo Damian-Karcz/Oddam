@@ -1,17 +1,17 @@
 import React from "react";
 import {Link} from "react-router-dom";
-// import {Link} from "react-scroll"
 import ScrollNav from "./ScrollNav";
-import * as ROUTES from "../constants/routes";
 import SignOutButton from "./SignOut";
+import { withFirebase  } from './Firebase'
 
 
-export default function NavAfterLogIn() {
+function NavAfterLogIn({ firebase }) {
     return (
         <>
             <div className="headerNav">
                 <div className="loginDiv">
-                    <Link to="/">email</Link>
+                    <span>Cześć {firebase.getCurrentUser()}</span>
+                    <Link to="/"></Link>
                     <Link to="/logout"><SignOutButton/></Link>
                 </div>
                 <div className="navDiv">
@@ -22,3 +22,5 @@ export default function NavAfterLogIn() {
         </>
     )
 }
+
+export default withFirebase(NavAfterLogIn)
