@@ -13,7 +13,7 @@ import Home from "../Home";
 // // import RegisterPage from "../RegisterPage";
 import SignUpPage from "../SignUp/SignUpPage";
 import SignInPage from "../SignIn/SingInPage";
-import NavAfterLogIn from "../NavAfterLogIn";
+import PageAfterLogin from "../PageAfterLogin";
 // import SignUpPage from "./components/SignUp";
 import SignOutLayout from "../SignOut/SignOutLayout";
 
@@ -33,7 +33,7 @@ function App() {
                   <SignUpPage/>
               </Route>
               <Route exact path="/home">
-                  <NavAfterLogIn/>
+                  <PageAfterLogin/>
               </Route>
               <Route exact path="/logout">
                   <SignOutLayout/>
