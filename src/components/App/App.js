@@ -9,12 +9,13 @@ import {HashRouter as Router, Route, Switch, } from 'react-router-dom';
 // } from 'react-router-dom';
 
 import Home from "../Home";
-import LoginPage from "../LoginPage";
-// import RegisterPage from "../RegisterPage";
+// import LoginPage from "../LoginPage";
+// // import RegisterPage from "../RegisterPage";
 import SignUpPage from "../SignUp/SignUpPage";
-import SignInPage from "../SingIn/SingInPage";
+import SignInPage from "../SignIn/SingInPage";
 import NavAfterLogIn from "../NavAfterLogIn";
 // import SignUpPage from "./components/SignUp";
+import SignOutLayout from "../SignOut/SignOutLayout";
 
 
 
@@ -33,6 +34,9 @@ function App() {
               </Route>
               <Route exact path="/home">
                   <NavAfterLogIn/>
+              </Route>
+              <Route exact path="/logout">
+                  <SignOutLayout/>
               </Route>
               {/*<Route path="/test" component={SignUpPage} />*/}
           </Switch>

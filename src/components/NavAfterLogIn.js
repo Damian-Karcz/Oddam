@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 // import {Link} from "react-scroll"
 import ScrollNav from "./ScrollNav";
 import * as ROUTES from "../constants/routes";
-import SignOutButton from "./SingOut";
+import SignOutButton from "./SignOut";
 
 
 export default function NavAfterLogIn() {
@@ -12,7 +12,7 @@ export default function NavAfterLogIn() {
             <div className="headerNav">
                 <div className="loginDiv">
                     <Link to="/">email</Link>
-                    <Link to="/"><SignOutButton/></Link>
+                    <Link to="/logout"><SignOutButton/></Link>
                 </div>
                 <div className="navDiv">
                     <Link to="/">Start</Link>
