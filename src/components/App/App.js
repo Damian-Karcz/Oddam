@@ -13,6 +13,7 @@ import LoginPage from "../LoginPage";
 // import RegisterPage from "../RegisterPage";
 import SignUpPage from "../SignUp/SignUpPage";
 import SignInPage from "../SingIn/SingInPage";
+import NavAfterLogIn from "../NavAfterLogIn";
 // import SignUpPage from "./components/SignUp";
 
 
@@ -29,6 +30,9 @@ function App() {
               </Route>
               <Route exact path="/register">
                   <SignUpPage/>
+              </Route>
+              <Route exact path="/home">
+                  <NavAfterLogIn/>
               </Route>
               {/*<Route path="/test" component={SignUpPage} />*/}
           </Switch>

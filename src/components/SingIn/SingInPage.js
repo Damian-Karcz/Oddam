@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import { compose } from 'recompose';
 
 import { withFirebase } from '../Firebase';
@@ -33,7 +33,7 @@ class SignInFormBase extends Component {
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({ ...INITIAL_STATE });
-                this.props.history.push(ROUTES.HOME);
+                this.props.history.push(ROUTES.HOME_LOGIN);
             })
             .catch(error => {
                 this.setState({ error });
@@ -52,36 +52,38 @@ class SignInFormBase extends Component {
 
         return (
             <>
-            <HomeNav/>
-        <div className="loginPageDiv">
-            <h1>Zaloguj się</h1>
-            <img src={decoration} alt="Decoration Border"/>
-            <div className="logInFormDiv">
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="password"
-                    value={password}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <button disabled={isInvalid} type="submit">
-                    Sign In
-                </button>
-                <button>Załóż konto</button>
+                <HomeNav/>
+                <div className="loginPageDiv">
+                    <h1>Zaloguj się</h1>
+                    <img src={decoration} alt="Decoration Border"/>
+                    <div className="logInFormDiv">
+                        <form className="logInForm" onSubmit={this.onSubmit}>
+                            <label>Email
+                                <input
+                                    name="email"
+                                    value={email}
+                                    onChange={this.onChange}
+                                    type="text"
+                                />
+                            </label>
+                            <label>Hasło
+                                <input
+                                    name="password"
+                                    value={password}
+                                    onChange={this.onChange}
+                                    type="password"
+                                />
+                            </label>
 
-                {error && <p>{error.message}</p>}
-            </form>
-            </div>
-        </div>
-                </>
+                            <button className="SingInButtonFirst"><Link to={ROUTES.SIGN_UP}>Załóż konto</Link></button>
+                            <button className="SubmitButton" disabled={isInvalid} type="submit">
+                                Zaloguj
+                            </button>
+                        </form>
+                    </div>
+                    {error && <p>{error.message}</p>}
+                </div>
+            </>
         );
     }
 }

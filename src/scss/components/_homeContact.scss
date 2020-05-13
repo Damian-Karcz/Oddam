@@ -1,17 +1,18 @@
 .contactMain {
-  display: flex;
-  height: 75vh;
-  margin: 0 auto;
+  margin: 5rem auto 0 auto;
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+  background-size: cover;
+  text-align: center;
+  opacity: 20%;
+}
 
+.contactSection {
+  display: flex;
 }
 
 .backgroundImageDiv {
   height: 100%;
   width: 60%;
-  background-image: url("../../assets/Background-Contact-Form.jpg");
-  background-size: cover;
-  text-align: center;
-  opacity: 20%;
 }
 
 .formDiv {
@@ -58,11 +59,15 @@
 }
 .pageFooter {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  margin-top: 15rem;
+  font-size: 0.8rem;
   div {
     display: flex;
-    margin-left: 10rem;
+    margin-right: 2rem;
     img {
+      margin-right: 1rem;
+
     }
   }
 }

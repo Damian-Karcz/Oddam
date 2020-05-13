@@ -4,8 +4,7 @@
 
 .loginPageDiv {
   margin: 3rem auto;
-  width: 400px;
-  height: 400px;
+
   text-align: center;
   h1 {
     font-size: 2rem;
@@ -14,20 +13,42 @@
   img {
     margin-bottom: 2rem;
   }
+  a{
+    text-decoration: none;
+    color: map_get($colors, navText);
+
+  }
+  //a:hover {
+  //  border: 0.75px solid map_get($colors, loginText);
+  //}
+  button {
+    font-size: 1.2rem;
+    border: none;
+    background-color: white;
+    outline: 0;
+    margin-top: 2rem;
+    position: relative;
+  }
+  .SingInButtonFirst {
+    right: 5rem;
+  }
+  .SubmitButton {
+    left: 11rem;
+  }
 }
 .logInFormDiv{
   background-color: #F0F1F1;
   width: 350px;
+  height: 190px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+
 }
 .logInForm {
-  background-color: #F0F1F1;
+  //background-color: #F0F1F1;
   font-size: 0.8rem;
-  width: 250px;
   margin: 2rem auto 0 auto;
   text-align: left;
+  padding: 2rem;
 
   input {
     padding-top: 0.3em;

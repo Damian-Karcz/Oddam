@@ -38,7 +38,8 @@ export default function HomeContact() {
 
     return (
         <>
-            <section className="contactMain">
+            <main className="contactMain">
+            <section className="contactSection">
                 <div className="backgroundImageDiv">
 
                 </div>
@@ -62,10 +63,11 @@ export default function HomeContact() {
             <footer className="pageFooter">
                 <p>Copyright by Coders Lab</p>
                 <div>
-                    <img src={facebookImg}/>
-                    <img src={instagramImg}/>
+                    <a target="_blank" href="https://www.facebook.com/"><img src={facebookImg}/></a>
+                    <a href="https://www.instagram.com/?hl=pl"><img src={instagramImg}/></a>
                 </div>
             </footer>
+            </main>
 
         </>
     )
