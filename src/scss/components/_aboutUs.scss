@@ -1,0 +1,42 @@
+#aboutAsSection {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  margin-top: 3rem;
+}
+.aboutUsTextDiv {
+  width: 50%;
+  height: 100%;
+  background-color: map_get($colors, backgroundColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.textDiv {
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+  img {
+    margin: 1rem 0 1.5rem 0;
+  }
+  p {
+    line-height: 2rem;
+    letter-spacing: -0.6px;
+  }
+  img:last-child {
+    width: 10rem;
+    height: 5rem;
+    margin-left: 15rem;
+  }
+}
+
+.aboutUsPhoto {
+  width: 50%;
+  height: 100%;
+  background-image: url("../../assets/People.jpg");
+  background-position: left;
+  background-size: cover;
+}
