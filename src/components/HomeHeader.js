@@ -33,4 +33,5 @@ function Home({firebase}) {
         </>
     )
 }
-        export default withFirebase(Home)
+
+export default withFirebase(Home)

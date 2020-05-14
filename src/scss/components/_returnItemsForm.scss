@@ -1,0 +1,25 @@
+.formMain {
+  height: 100vh;
+}
+.importantDiv {
+  background-color: #FAD648;
+  height: 15vh;
+  h1 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 0.6rem;
+    margin-left: 3rem;
+  }
+  p{
+    padding-bottom: 1rem;
+    margin-left: 3rem;
+    color: #3C3C3C;
+  }
+}
+
+.returnItemSection {
+  height: 85vh;
+  background-image: url("../../assets/Background-Form.jpg");
+  background-size: cover;
+  background-position: right;
+}
