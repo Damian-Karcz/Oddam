@@ -3,7 +3,7 @@
 }
 .importantDiv {
   background-color: #FAD648;
-  height: 15vh;
+
   h1 {
     font-size: 2rem;
     padding-top: 1rem;
@@ -18,8 +18,53 @@
 }
 
 .returnItemSection {
-  height: 85vh;
   background-image: url("../../assets/Background-Form.jpg");
   background-size: cover;
-  background-position: right;
+  background-position-y: 3rem;
+  height: 100vh;
+  button {
+    border: 1px solid black;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    outline: 0;
+  }
 }
+.form-carousel__nav-container button.hide {
+  display: none;
+}
+
+
+//.formReturnItems {
+//  width: 50%;
+//  border: none;
+//}
+
+.stepAll {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.stepsFormFirst {
+  input {
+    margin-top: 1rem;
+  }
+}
+
+.stepsFormSecond {
+  option{
+
+  }
+}
+
+.stepsFormThird{
+
+}
+
+
