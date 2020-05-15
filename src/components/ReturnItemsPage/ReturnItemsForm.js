@@ -15,11 +15,15 @@ export default function ReturnItemsHome()  {
     // const checkboxLabel = () => {
     //     setColor("orange")
     // }
-
     const handleWhoWantHelp = (e) => {
-        setWhoWantHelp( [whoWantHelp, e.target.value])
+        if (whoWantHelp.includes(e.target.value)) {
+            setWhoWantHelp( whoWantHelp.filter(el => el !== e.target.value))
+            return
+        }
+        setWhoWantHelp( [...whoWantHelp, e.target.value])
         setColor("orange")
     }
+
     //--Item Type--//
     const [itemType, setItemType] = useState("")
     const handleItemType = (e) => {
@@ -110,19 +114,19 @@ export default function ReturnItemsHome()  {
                             </select><br/>
                             <h2>Komu chcesz pomóc?</h2><br/>
                             <div className="checkDiv">
-                                <label style={colorLabelStyle} >dzieciom
+                                <label style={whoWantHelp.includes("dzieciom") ? colorLabelStyle: {}} >dzieciom
                                     <input type="checkbox" value="dzieciom" onClick={handleWhoWantHelp}/>
                                 </label>
-                                <label style={colorLabelStyle} >samotnym matkom
+                                <label style={whoWantHelp.includes("samotnym matkom") ? colorLabelStyle: {}} >samotnym matkom
                                     <input type="checkbox" value="samotnym matkom" onClick={handleWhoWantHelp}/>
                                 </label>
-                                <label style={colorLabelStyle} >bezdomnym
+                                <label style={whoWantHelp.includes("bezdomnym") ? colorLabelStyle: {}} >bezdomnym
                                     <input type="checkbox" value="bezdomnym" />
                                 </label>
-                                <label style={colorLabelStyle} >niepełnosprawnym
+                                <label style={whoWantHelp.includes("niepełnosprawnym") ? colorLabelStyle: {}} >niepełnosprawnym
                                     <input type="checkbox" value="niepełnosprawnym" onClick={handleWhoWantHelp}/>
                                 </label>
-                                <label style={colorLabelStyle} >osobom starszym
+                                <label style={whoWantHelp.includes("osobom starszym") ? colorLabelStyle: {}} >osobom starszym
                                     <input type="checkbox" value="osobom starszym" onClick={handleWhoWantHelp}/>
                                 </label>
                             </div>
