@@ -30,6 +30,13 @@
     cursor: pointer;
     outline: 0;
   }
+  input {
+    background-color: #80808000;
+    border: 1px solid grey;
+  }
+  select {
+    background-color: #80808000;
+  }
 }
 .form-carousel__nav-container button.hide {
   display: none;
@@ -56,15 +63,79 @@
     margin-top: 1rem;
   }
 }
-
-.stepsFormSecond {
-  option{
-
+.stepsFormThird {
+  h1 {
+    margin-bottom: 0;
+  }
+  select {
+    margin-bottom: 1rem;
+    width: 9rem;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-weight: bold;
   }
 }
 
-.stepsFormThird{
-
+.checkDiv {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 33rem;
+  label {
+    border:1px solid #ccc;
+    padding:6px 0 6px 20px;
+    margin-right: 1rem;
+  }
+  label:hover {
+    background:lightgray;
+    cursor:pointer;
+  }
+  input {
+    //visibility: hidden;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+  }
+}
+.addressDateForm, .addressDateSummary {
+  display: flex;
 }
 
+.dateDiv, .addressDiv {
+  display: grid;
+  input, textarea {
+    margin: 0.6rem 0 0 1rem;
 
+  }
+}
+.dateDiv {
+  margin-left: 2rem;
+  .textareaStyle {
+    resize: none;
+    margin: 0.6rem 0 0 1rem;
+  }
+}
+
+.stepsSummary {
+  h1 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addressDiv {
+    margin-right: 5rem;
+  }
+  span {
+    margin-left: 2rem;
+  }
+
+}

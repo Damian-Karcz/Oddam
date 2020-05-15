@@ -20,7 +20,9 @@ function Home({firebase}) {
                         <h1>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce </h1>
                         <img src={decoration} alt="Decoration Border"/>
                         <div className="headerButtons">
-                            <Link to="/login"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>
+                            {isUser ? <Link to="/oddaj-rzeczy"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>:
+                                <Link to="/login"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>}
+                            {/*<Link to="/login"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>*/}
                             <Link to="/login"><button className="buttonsHeader">Zorganizuj <br/>zbiórkę</button></Link>
                         </div>
 

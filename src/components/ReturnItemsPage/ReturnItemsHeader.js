@@ -5,7 +5,7 @@ import NavAfterLogIn from "../NavAfterLogIn";
 
 function ReturnItemsHeader({firebase}) {
 
-    const isUser = firebase.getCurrentUser()
+    // const isUser = firebase.getCurrentUser()
     return (
         <>
             <div className="headerContainer">
