@@ -6,6 +6,7 @@ import Home from "../Home";
 import SignUpPage from "../SignUp/SignUpPage";
 import SignInPage from "../SignIn/SingInPage";
 import SignOutLayout from "../SignOut/SignOutLayout";
+import ReturnItemsHome from "../ReturnItemsPage/ReturnItmesHome";
 
 
 
@@ -24,6 +25,9 @@ function App() {
               </Route>
               <Route exact path="/logout">
                   <SignOutLayout/>
+              </Route>
+              <Route exact path="/oddaj-rzeczy">
+                  <ReturnItemsHome/>
               </Route>
           </Switch>
       </Router>

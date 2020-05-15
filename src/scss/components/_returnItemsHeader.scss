@@ -1,0 +1,55 @@
+.returnHeaderPhoto {
+  width: 50%;
+  height: 100%;
+  background-image: url("../../assets/Form-Hero-Image.jpg");
+  background-size: cover;
+  background-position: right;
+  h2 {
+    font-size: 2rem;
+  }
+}
+.headerHeadingReturn {
+  text-align: center;
+  vertical-align: center;
+  margin-top: 8rem;
+  margin-right: 5rem;
+  h1 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.76px;
+    font-weight: lighter;
+  }
+  img {
+    margin: 1.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.fourStepsHeaderDiv {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.fourSteps {
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid black;
+  transform: rotate(45deg);
+  margin-left: 1rem;
+  position: relative;
+  p, h3 {
+    position: absolute;
+    transform: rotate(-45deg);
+  }
+  p {
+    padding: 49px 0 0 9px
+  }
+  h3 {
+    padding: 28px 0 0 17px;
+    font-size: 1.3rem;
+  }
+}
+

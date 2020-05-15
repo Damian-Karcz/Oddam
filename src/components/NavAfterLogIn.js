@@ -11,7 +11,7 @@ function NavAfterLogIn({ firebase }) {
             <div className="headerNav">
                 <div className="loginDiv">
                     <span>Cześć {firebase.getCurrentUser()}</span>
-                    <Link to="/"></Link>
+                    <Link to="/oddaj-rzeczy">Oddaj rzeczy</Link>
                     <Link to="/logout"><SignOutButton/></Link>
                 </div>
                 <div className="navDiv">

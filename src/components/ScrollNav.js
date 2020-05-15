@@ -7,7 +7,7 @@ export default function ScrollNav() {
             <Link to="fourStepSection" smooth={true} duration={1500}>O co chodzi?</Link>
             <Link to="aboutAsSection" smooth={true} duration={1500}>O nas</Link>
             <Link to="whoWeHelpSection" smooth={true} duration={1500}>Fundacje i organizacje</Link>
-            <Link to="/">Kontakt</Link>
+            <Link to="contactMain" smooth={true} duration={1500}>Kontakt</Link>
         </>
     )
 }

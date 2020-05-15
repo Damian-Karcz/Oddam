@@ -1,0 +1,141 @@
+.formMain {
+  height: 100vh;
+}
+.importantDiv {
+  background-color: #FAD648;
+
+  h1 {
+    font-size: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 0.6rem;
+    margin-left: 3rem;
+  }
+  p{
+    padding-bottom: 1rem;
+    margin-left: 3rem;
+    color: #3C3C3C;
+  }
+}
+
+.returnItemSection {
+  background-image: url("../../assets/Background-Form.jpg");
+  background-size: cover;
+  background-position-y: 3rem;
+  height: 100vh;
+  button {
+    border: 1px solid black;
+    margin-left: 2rem;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    cursor: pointer;
+    outline: 0;
+  }
+  input {
+    background-color: #80808000;
+    border: 1px solid grey;
+  }
+  select {
+    background-color: #80808000;
+  }
+}
+.form-carousel__nav-container button.hide {
+  display: none;
+}
+
+
+//.formReturnItems {
+//  width: 50%;
+//  border: none;
+//}
+
+.stepAll {
+  margin-left: 3rem;
+  margin-top: 2rem;
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.stepsFormFirst {
+  input {
+    margin-top: 1rem;
+  }
+}
+.stepsFormThird {
+  h1 {
+    margin-bottom: 0;
+  }
+  select {
+    margin-bottom: 1rem;
+    width: 9rem;
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.checkDiv {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 33rem;
+  label {
+    border:1px solid #ccc;
+    padding:6px 0 6px 20px;
+    margin-right: 1rem;
+  }
+  label:hover {
+    background:lightgray;
+    cursor:pointer;
+  }
+  input {
+    //visibility: hidden;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+  }
+}
+.addressDateForm, .addressDateSummary {
+  display: flex;
+}
+
+.dateDiv, .addressDiv {
+  display: grid;
+  input, textarea {
+    margin: 0.6rem 0 0 1rem;
+
+  }
+}
+.dateDiv {
+  margin-left: 2rem;
+  .textareaStyle {
+    resize: none;
+    margin: 0.6rem 0 0 1rem;
+  }
+}
+
+.stepsSummary {
+  h1 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+  img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .addressDiv {
+    margin-right: 5rem;
+  }
+  span {
+    margin-left: 2rem;
+  }
+
+}
