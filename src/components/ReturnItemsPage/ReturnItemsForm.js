@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState} from 'react';
 import Form, { Page } from 'react-form-carousel';
 import loadImg from '../../assets/Icon-4.svg';
 import shirtIcon from '../../assets/Icon-1.svg'
@@ -8,7 +8,7 @@ import firebase from "firebase";
 export default function ReturnItemsHome()  {
     const [whoWantHelp, setWhoWantHelp] = useState([])
     const [color, setColor] = useState("")
-    const [readData, setReadData] = useState([])
+    // const [readData, setReadData] = useState([])
 
 
     //--step3 //

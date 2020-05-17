@@ -1,22 +1,39 @@
-import React from "react";
+import React, {useState} from "react";
 
 export default function FoundationDetails() {
+    const [showSectionFirst, setShowSectionFirst] = useState("block");
+    const [showSectionSecond, setShowSectionSecond] = useState("none");
+
+    const sectionFirstStyle = {
+        display: showSectionFirst
+    }
+    const sectionSecondStyle = {
+        display: showSectionSecond
+    }
+    const firstPageClick = () => {
+        setShowSectionFirst("block")
+        setShowSectionSecond("none")
+    }
+    const secondPageClick = () => {
+        setShowSectionFirst("none")
+        setShowSectionSecond("block")
+    }
     return (
         <>
             <p className="textHead">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
-            <section>
+            <section style={sectionFirstStyle}>
                 <div className="detailsDiv">
                     <div>
-                        <h3>Fundacja “Dbam o Zdrowie”</h3>
-                        <span>Cel i misja: Pomoc osobom znajdującym się w trudnej sytuacji życiowej.</span>
+                        <h3>Organizacja “Lorem Ipsum 1”</h3>
+                        <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
                     </div>
-                    <p>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                    <p>Egestas, sed, tempus</p>
                 </div>
                 <div>
                     <div className="detailsDiv">
                         <div>
-                            <h3>Fundacja “Dla dzieci”</h3>
-                            <span>Cel i misja: Pomoc dzieciom z ubogich rodzin.</span>
+                            <h3>Organizacja “Lorem Ipsum 1”</h3>
+                            <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
                         </div>
                         <p>ubrania, meble, zabawki</p>
                     </div>
@@ -24,21 +41,21 @@ export default function FoundationDetails() {
                 <div>
                     <div className="detailsDiv" id="withoutBorder">
                         <div>
-                            <h3>Fundacja “Bez domu”</h3>
-                            <span>Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</span>
+                            <h3>Organizacja “Lorem Ipsum 1”</h3>
+                            <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
                         </div>
-                        <p>ubrania, jedzenie, ciepłe koce</p>
+                        <p>Egestas, sed, tempus</p>
                     </div>
                 </div>
             </section>
 
-            <section>
+            <section style={sectionSecondStyle}>
                 <div className="detailsDiv">
                     <div>
                         <h3>What is Lorem Ipsum?</h3>
                         <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
                     </div>
-                    <p>It is a long established fact that</p>
+                    <p>Ut, aliquam, purus, sit, amet</p>
                 </div>
                 <div>
                     <div className="detailsDiv">
@@ -46,7 +63,7 @@ export default function FoundationDetails() {
                             <h3>Where does it come from?</h3>
                             <span>There are many variations of passages of Lorem Ipsum available</span>
                         </div>
-                        <p>Contrary to popular belief</p>
+                        <p>Mi, quis, hendrerit, dolor</p>
                     </div>
                 </div>
                 <div>
@@ -60,8 +77,8 @@ export default function FoundationDetails() {
                 </div>
             </section>
 
-            <button>1</button>
-            <button>2</button>
+            <button onClick={firstPageClick}>1</button>
+            <button onClick={secondPageClick}>2</button>
 
         </>
     )

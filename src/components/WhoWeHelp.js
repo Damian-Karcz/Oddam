@@ -81,16 +81,34 @@ export default function WhoWeHelp() {
                     <OrganizationDetails/>
                 </div>
                 <div className="localDiv" style={localStyles}>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                    <div>1
-
-                    </div>
-                    <div>2
-
-                    </div>
-                    <div>3
-
-                    </div>
+                    <p className="textHead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <section>
+                        <div className="detailsDiv">
+                            <div>
+                                <h3>Zbiórka “Lorem Ipsum 1”</h3>
+                                <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
+                            </div>
+                            <p>ubrania, jedzenie, sprzęt AGD, meble, zabawki</p>
+                        </div>
+                        <div>
+                            <div className="detailsDiv">
+                                <div>
+                                    <h3>Zbiórka “Lorem Ipsum 2”</h3>
+                                    <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
+                                </div>
+                                <p>ubrania, meble, zabawki</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="detailsDiv" id="withoutBorder">
+                                <div>
+                                    <h3>Zbiórka “Lorem Ipsum 3”</h3>
+                                    <span>Quis varius quam quisque id diam vel quam elementum pulvinar.</span>
+                                </div>
+                                <p>ubrania, jedzenie, ciepłe koce</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
         </>

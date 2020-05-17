@@ -34,7 +34,7 @@ export default function FoundationDetails() {
     }
     return (
         <>
-            <p className="textHead">W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+            <p className="textHead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
            <section style={sectionFirstStyle}>
                 <div className="detailsDiv">
                     <div>

@@ -7,6 +7,7 @@ import SignUpPage from "../SignUp/SignUpPage";
 import SignInPage from "../SignIn/SingInPage";
 import SignOutLayout from "../SignOut/SignOutLayout";
 import ReturnItemsHome from "../ReturnItemsPage/ReturnItmesHome";
+import PageSuccessForm from "../ReturnItemsPage/PageSuccessForm";
 
 
 
@@ -28,6 +29,9 @@ function App() {
               </Route>
               <Route exact path="/oddaj-rzeczy">
                   <ReturnItemsHome/>
+              </Route>
+              <Route exact path="/formularz">
+                  <PageSuccessForm/>
               </Route>
           </Switch>
       </Router>
