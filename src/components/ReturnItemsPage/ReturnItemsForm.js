@@ -1,20 +1,20 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import Form, { Page } from 'react-form-carousel';
 import loadImg from '../../assets/Icon-4.svg';
 import shirtIcon from '../../assets/Icon-1.svg'
-
+import firebase from "firebase";
 
 
 export default function ReturnItemsHome()  {
     const [whoWantHelp, setWhoWantHelp] = useState([])
     const [color, setColor] = useState("")
+    const [readData, setReadData] = useState([])
 
+
+    //--step3 //
     const colorLabelStyle = {
         backgroundColor: color
     }
-    // const checkboxLabel = () => {
-    //     setColor("orange")
-    // }
     const handleWhoWantHelp = (e) => {
         if (whoWantHelp.includes(e.target.value)) {
             setWhoWantHelp( whoWantHelp.filter(el => el !== e.target.value))
@@ -23,6 +23,16 @@ export default function ReturnItemsHome()  {
         setWhoWantHelp( [...whoWantHelp, e.target.value])
         setColor("orange")
     }
+    const [localization, setLocalization] = useState("")
+    const localizationChange = (e) => {
+        setLocalization(e.target.value)
+    }
+
+    const [organizationName, setOrganizationName] = useState("");
+    const organizationNameChange = (e) => {
+        setOrganizationName(e.target.value)
+    }
+
 
     //--Item Type--//
     const [itemType, setItemType] = useState("")
@@ -50,10 +60,41 @@ export default function ReturnItemsHome()  {
     const handleDateDetails = ({target}) => {
         setDateDetails(prev=>({...prev, [target.name]: target.value}))
     }
+    const db = firebase.firestore();
+
+    // useEffect( ( ) => {
+    //     db.collection("users").get().then((querySnapshot) => {
+    //         querySnapshot.forEach((doc) => {
+    //             console.log(`${doc.id} => ${doc.data()}`);
+    //             setReadData( prev => ([...prev, doc.data()]))
+    //         });
+    //     });
+    // },[])
+
+
+    const onSubmit = () => {
+        db.collection("users").add({
+            itemType: itemType,
+            quantity: bagsNumber,
+            localization: localization,
+            forWho: whoWantHelp,
+            organizationName: organizationName,
+            address: addressDetails,
+            date: dateDetails
+
+        })
+            .then(function (docRef) {
+                console.log("Document written with ID: ", docRef.id);
+            })
+            .catch(function (error) {
+                console.error("Error adding document: ", error);
+            });
+    }
+
     return (
         <>
             <main className="returnItemSection">
-                <Form>
+                <Form onSubmit={onSubmit} key="jeden">
                     <Page>
                         <div className="importantDiv">
                             <h1>Ważne!</h1>
@@ -104,7 +145,7 @@ export default function ReturnItemsHome()  {
                         <div className="stepsFormThird stepAll">
                             <p>Krok 3/4</p>
                             <label><h1>Lokalizacja: </h1></label><br/>
-                            <select>
+                            <select onChange={localizationChange} value={localization} name="localization">
                                 <option>--wybierz--</option>
                                 <option>Poznań</option>
                                 <option>Warszawa</option>
@@ -121,7 +162,7 @@ export default function ReturnItemsHome()  {
                                     <input type="checkbox" value="samotnym matkom" onClick={handleWhoWantHelp}/>
                                 </label>
                                 <label style={whoWantHelp.includes("bezdomnym") ? colorLabelStyle: {}} >bezdomnym
-                                    <input type="checkbox" value="bezdomnym" />
+                                    <input type="checkbox" value="bezdomnym" onClick={handleWhoWantHelp}/>
                                 </label>
                                 <label style={whoWantHelp.includes("niepełnosprawnym") ? colorLabelStyle: {}} >niepełnosprawnym
                                     <input type="checkbox" value="niepełnosprawnym" onClick={handleWhoWantHelp}/>
@@ -131,7 +172,7 @@ export default function ReturnItemsHome()  {
                                 </label>
                             </div>
                             <label><h2>Wpisz nazwę konkretnej organizacji (opcjonalnie)</h2></label>
-                            <input type="text"/>
+                            <input type="text" value={organizationName} onChange={organizationNameChange} name="oraganizationName"/>
                         </div>
                     </Page>
                     <Page>
@@ -185,7 +226,7 @@ export default function ReturnItemsHome()  {
                                 {/*    ))*/}
                                 {/*}*/}
                             </p>
-                            <p><img src={loadImg} alt="Loading Icon"/>Dla lokalizacji: {addressDetails.town} </p>
+                            <p><img src={loadImg} alt="Loading Icon"/>Dla lokalizacji: {localization} </p>
                             <div className="addressDateSummary">
                                 <div className="addressDiv">
                                     <h2>Adres odbioru</h2>
