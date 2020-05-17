@@ -5,11 +5,12 @@ import shirtIcon from '../../assets/Icon-1.svg'
 import firebase from "firebase";
 
 
-export default function ReturnItemsHome()  {
+export default function ReturnItemsHome(props)  {
     const [whoWantHelp, setWhoWantHelp] = useState([])
     const [color, setColor] = useState("")
     // const [readData, setReadData] = useState([])
 
+    const userEmail = props.user;
 
     //--step3 //
     const colorLabelStyle = {
@@ -72,8 +73,8 @@ export default function ReturnItemsHome()  {
     // },[])
 
 
-    const onSubmit = () => {
-        db.collection("users").add({
+    const onSubmit = (props) => {
+        db.collection(`${props}`).add({
             itemType: itemType,
             quantity: bagsNumber,
             localization: localization,
@@ -94,7 +95,7 @@ export default function ReturnItemsHome()  {
     return (
         <>
             <main className="returnItemSection">
-                <Form onSubmit={onSubmit} key="jeden">
+                <Form onSubmit={ () => onSubmit(userEmail)}>
                     <Page>
                         <div className="importantDiv">
                             <h1>Ważne!</h1>

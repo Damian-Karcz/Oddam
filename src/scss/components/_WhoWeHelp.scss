@@ -58,3 +58,15 @@
   border-bottom: none
 }
 
+.buttonsNumbers {
+  border: none;
+  color: map_get($colors, navText);
+  background-color: white;
+  text-transform: uppercase;
+  //padding: 10px;
+  font-weight: lighter;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  outline: 0;
+
+}

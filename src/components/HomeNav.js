@@ -13,7 +13,7 @@ export default function HomeNav() {
                         <Link to={ROUTES.SIGN_UP}>Załóż konto</Link>
                     </div>
                     <div className="navDiv">
-                        <Link to="/">Start</Link>
+                        <Link to={ROUTES.HOME}>Start</Link>
                         <ScrollNav/>
                     </div>
                 </div>

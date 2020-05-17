@@ -12,7 +12,6 @@ const SignUpPage = () => (
     </div>
 );
 const INITIAL_STATE = {
-    // username: '',
     email: '',
     passwordOne: '',
     passwordTwo: '',
@@ -63,41 +62,43 @@ class SignUpFormBase extends Component {
         return (
             <>
                     <HomeNav/>
-                    <div className="loginPageDiv">
-                        <h1>Załóż konto</h1>
-                        <img src={decoration} alt="Decoration Border"/>
-                        <div className="logInFormDiv">
-                    <form onSubmit={this.onSubmit} className="logInForm">
-                        <input
-                            name="email"
-                            value={email}
-                            onChange={this.onChange}
-                            type="text"
-                            placeholder="Email Address"
-                        />
-                        <input
-                            name="passwordOne"
-                            value={passwordOne}
-                            onChange={this.onChange}
-                            type="password"
-                            placeholder="Password"
-                        />
-                        <input
-                            name="passwordTwo"
-                            value={passwordTwo}
-                            onChange={this.onChange}
-                            type="password"
-                            placeholder="Confirm Password"
-                        />
-                        <Link to={ROUTES.SIGN_IN}>Zaloguj</Link>
-                        <button disabled={isInvalid} type="submit">
-                            Sign Up
-                        </button>
+                    <main className="singUpMain">
+                        <div className="loginPageDiv">
+                            <h1>Załóż konto</h1>
+                            <img src={decoration} alt="Decoration Border"/>
+                            <div className="logInFormDiv">
+                                <form onSubmit={this.onSubmit} className="logInForm">
+                                    <input
+                                        name="email"
+                                        value={email}
+                                        onChange={this.onChange}
+                                        type="text"
+                                        placeholder="Email Address"
+                                    />
+                                    <input
+                                        name="passwordOne"
+                                        value={passwordOne}
+                                        onChange={this.onChange}
+                                        type="password"
+                                        placeholder="Password"
+                                    />
+                                    <input
+                                        name="passwordTwo"
+                                        value={passwordTwo}
+                                        onChange={this.onChange}
+                                        type="password"
+                                        placeholder="Confirm Password"
+                                    />
+                                    <button className="SingInButtonFirst"><Link to={ROUTES.SIGN_IN}>Zaloguj</Link></button>
+                                    <button className="SubmitButton" disabled={isInvalid} type="submit">
+                                        Sign Up
+                                    </button>
 
-                        {error && <p>{error.message}</p>}
-                    </form>
+                                    {error && <p>{error.message}</p>}
+                                </form>
+                            </div>
                         </div>
-                    </div>
+                    </main>
             </>
         );
     }

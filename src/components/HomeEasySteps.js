@@ -5,8 +5,11 @@ import shirtIcon from "../assets/Icon-1.svg";
 import bagIcon from "../assets/Icon-2.svg";
 import searchIcon from "../assets/Icon-3.svg";
 import loadIcon from "../assets/Icon-4.svg";
+import * as ROUTES from "../constants/routes";
+import { withFirebase  } from './Firebase'
 
-export default function HomeEasySteps() {
+function HomeEasySteps({firebase}) {
+    const isUser = firebase.getCurrentUser()
     return (
         <>
             <main id="fourStepSection">
@@ -38,8 +41,11 @@ export default function HomeEasySteps() {
                         <p>kurier przyjedzie w dogodnym terminie</p>
                     </div>
                 </div>
-                <button className="buttonsHeader"><Link to="/login"/> Oddaj rzeczy</button>
+                {isUser ?<Link to={ROUTES.ITEMS}><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>:
+                    <Link to={ROUTES.SIGN_IN}><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>}
             </main>
         </>
     )
 }
+
+export default withFirebase(HomeEasySteps)

@@ -4,6 +4,7 @@ import decoration from "../assets/Decoration.svg";
 import HomeNav from "./HomeNav";
 import { withFirebase  } from './Firebase'
 import NavAfterLogIn from "./NavAfterLogIn";
+import * as ROUTES from "../constants/routes";
 
 function Home({firebase}) {
 
@@ -20,10 +21,10 @@ function Home({firebase}) {
                         <h1>Zacznij pomagać! <br/> Oddaj niechciane rzeczy w zaufane ręce </h1>
                         <img src={decoration} alt="Decoration Border"/>
                         <div className="headerButtons">
-                            {isUser ? <Link to="/oddaj-rzeczy"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>:
-                                <Link to="/login"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>}
+                            {isUser ? <Link to={ROUTES.ITEMS}><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>:
+                                <Link to={ROUTES.SIGN_IN}><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>}
                             {/*<Link to="/login"><button className="buttonsHeader">Oddaj <br/>rzeczy</button></Link>*/}
-                            <Link to="/login"><button className="buttonsHeader">Zorganizuj <br/>zbiórkę</button></Link>
+                            <Link to={ROUTES.ITEMS}><button className="buttonsHeader">Zorganizuj <br/>zbiórkę</button></Link>
                         </div>
 
 

@@ -2,13 +2,18 @@ import React from 'react';
 import ReturnItemsHeader from "./ReturnItemsHeader";
 import ReturnItemsForm from "./ReturnItemsForm"
 import HomeContact from "../HomeContact";
+import {withFirebase} from "../Firebase";
 
-export default function ReturnItemsHome() {
+function ReturnItemsHome({firebase}) {
+    const user = firebase.getCurrentUser()
+
     return (
         <>
             <ReturnItemsHeader/>
-            <ReturnItemsForm/>
+            <ReturnItemsForm user={user}/>
             <HomeContact/>
         </>
     )
 }
+
+export default withFirebase(ReturnItemsHome)

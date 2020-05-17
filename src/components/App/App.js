@@ -8,6 +8,7 @@ import SignInPage from "../SignIn/SingInPage";
 import SignOutLayout from "../SignOut/SignOutLayout";
 import ReturnItemsHome from "../ReturnItemsPage/ReturnItmesHome";
 import PageSuccessForm from "../ReturnItemsPage/PageSuccessForm";
+import * as ROUTES from "../../constants/routes";
 
 
 
@@ -15,22 +16,22 @@ function App() {
   return (
       <Router>
           <Switch>
-              <Route exact path="/">
+              <Route exact path={ROUTES.HOME}>
                   <Home/>
               </Route>
-              <Route exact path="/login">
+              <Route exact path={ROUTES.SIGN_IN}>
                   <SignInPage/>
               </Route>
-              <Route exact path="/register">
+              <Route exact path={ROUTES.SIGN_UP}>
                   <SignUpPage/>
               </Route>
-              <Route exact path="/logout">
+              <Route exact path={ROUTES.SIGN_OUT}>
                   <SignOutLayout/>
               </Route>
-              <Route exact path="/oddaj-rzeczy">
+              <Route exact path={ROUTES.ITEMS}>
                   <ReturnItemsHome/>
               </Route>
-              <Route exact path="/formularz">
+              <Route exact path={ROUTES.FORM}>
                   <PageSuccessForm/>
               </Route>
           </Switch>

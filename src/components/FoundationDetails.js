@@ -4,6 +4,19 @@ export default function FoundationDetails() {
     const [showSectionFirst, setShowSectionFirst] = useState("block");
     const [showSectionSecond, setShowSectionSecond] = useState("none");
     const [showSectionThird, setShowSectionThird] = useState("none");
+    const [borderPageOne, setBorderPageOne] = useState("1px solid black")
+    const [borderPageTwo, setBorderPageTwo] = useState("none")
+    const [borderPageThree, setBorderPageThree] = useState("none")
+
+    const borderOne = {
+        border: borderPageOne
+    }
+    const borderTwo = {
+        border: borderPageTwo
+    }
+    const borderThree= {
+        border: borderPageThree
+    }
 
     const sectionFirstStyle = {
         display: showSectionFirst
@@ -19,18 +32,27 @@ export default function FoundationDetails() {
         setShowSectionFirst("block")
         setShowSectionSecond("none")
         setShowSectionThird("none")
+        setBorderPageOne("1px solid black")
+        setBorderPageTwo("none")
+        setBorderPageThree("none")
     }
 
     const secondPageClick = () => {
         setShowSectionFirst("none")
         setShowSectionSecond("block")
         setShowSectionThird("none")
+        setBorderPageOne("none")
+        setBorderPageTwo("1px solid black")
+        setBorderPageThree("none")
     }
 
     const thirdPageClick = () => {
         setShowSectionFirst("none")
         setShowSectionSecond("none")
         setShowSectionThird("block")
+        setBorderPageOne("none")
+        setBorderPageTwo("none")
+        setBorderPageThree("1px solid black")
     }
     return (
         <>
@@ -102,7 +124,7 @@ export default function FoundationDetails() {
                 <div>
                     <div className="detailsDiv">
                         <div>
-                            <h3>Fundacja “Dla dzieci”</h3>
+                            <h3>Where does it come from?</h3>
                             <span>Cel i misja: Pomoc dzieciom z ubogich rodzin.</span>
                         </div>
                         <p>ubrania, meble, zabawki</p>
@@ -112,16 +134,16 @@ export default function FoundationDetails() {
                     <div className="detailsDiv" id="withoutBorder">
                         <div>
                             <h3>Fundacja “Bez domu”</h3>
-                            <span>Cel i misja: Pomoc dla osób nie posiadających miejsca zamieszkania.</span>
+                            <span>There are many variations of passages of Lorem Ipsum available</span>
                         </div>
                         <p>ubrania, jedzenie, ciepłe koce</p>
                     </div>
                 </div>
             </section>
 
-            <button onClick={firstPageClick}>1</button>
-            <button onClick={secondPageClick}>2</button>
-            <button onClick={thirdPageClick}>3</button>
+            <button className="buttonsNumbers" style={borderOne}  onClick={firstPageClick}>1</button>
+            <button style={borderTwo} className="buttonsNumbers" onClick={secondPageClick}>2</button>
+            <button style={borderThree} className="buttonsNumbers" onClick={thirdPageClick}>3</button>
         </>
     )
 }

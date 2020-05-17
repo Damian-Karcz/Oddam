@@ -3,6 +3,17 @@ import React, {useState} from "react";
 export default function FoundationDetails() {
     const [showSectionFirst, setShowSectionFirst] = useState("block");
     const [showSectionSecond, setShowSectionSecond] = useState("none");
+    const [borderPageOne, setBorderPageOne] = useState("1px solid black")
+    const [borderPageTwo, setBorderPageTwo] = useState("none")
+
+
+    const borderOne = {
+        border: borderPageOne
+    }
+    const borderTwo = {
+        border: borderPageTwo
+    }
+
 
     const sectionFirstStyle = {
         display: showSectionFirst
@@ -13,10 +24,14 @@ export default function FoundationDetails() {
     const firstPageClick = () => {
         setShowSectionFirst("block")
         setShowSectionSecond("none")
+        setBorderPageOne("1px solid black")
+        setBorderPageTwo("none")
     }
     const secondPageClick = () => {
         setShowSectionFirst("none")
         setShowSectionSecond("block")
+        setBorderPageOne("none")
+        setBorderPageTwo("1px solid black")
     }
     return (
         <>
@@ -77,8 +92,8 @@ export default function FoundationDetails() {
                 </div>
             </section>
 
-            <button onClick={firstPageClick}>1</button>
-            <button onClick={secondPageClick}>2</button>
+            <button style={borderOne} className="buttonsNumbers" onClick={firstPageClick}>1</button>
+            <button style={borderTwo} className="buttonsNumbers" onClick={secondPageClick}>2</button>
 
         </>
     )
