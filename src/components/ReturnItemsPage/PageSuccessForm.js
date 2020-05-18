@@ -1,7 +1,15 @@
-import React from "react";
-import decoration from "../../assets/Decoration.svg"
+import React, {useEffect} from "react";
+import decoration from "../../assets/Decoration.svg";
+import { useHistory } from 'react-router-dom'
 
 const PageSuccessForm = () => {
+    const history = useHistory();
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            history.push("/")
+        }, 3000)
+        return () => clearTimeout(timeout)
+    })
     return (
         <div className="lastPageForm">
             <div className="headerAndImage">

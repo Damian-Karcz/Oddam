@@ -3,12 +3,15 @@ import Form, { Page } from 'react-form-carousel';
 import loadImg from '../../assets/Icon-4.svg';
 import shirtIcon from '../../assets/Icon-1.svg'
 import firebase from "firebase";
-
+import {useHistory} from "react-router-dom"
+import * as ROUTES from "../../constants/routes";
 
 export default function ReturnItemsHome(props)  {
     const [whoWantHelp, setWhoWantHelp] = useState([])
     const [color, setColor] = useState("")
     // const [readData, setReadData] = useState([])
+
+    const history = useHistory();
 
     const userEmail = props.user;
 
@@ -75,17 +78,17 @@ export default function ReturnItemsHome(props)  {
 
     const onSubmit = (props) => {
         db.collection(`${props}`).add({
-            itemType: itemType,
+            itemType,
             quantity: bagsNumber,
-            localization: localization,
+            localization,
             forWho: whoWantHelp,
-            organizationName: organizationName,
+            organizationName,
             address: addressDetails,
             date: dateDetails
-
         })
             .then(function (docRef) {
                 console.log("Document written with ID: ", docRef.id);
+                history.push(ROUTES.FORM)
             })
             .catch(function (error) {
                 console.error("Error adding document: ", error);
