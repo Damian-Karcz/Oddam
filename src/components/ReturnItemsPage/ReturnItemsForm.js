@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import Form, { Page } from 'react-form-carousel';
+import Form, { Page } from '../testForm';
 import loadImg from '../../assets/Icon-4.svg';
 import shirtIcon from '../../assets/Icon-1.svg'
 import firebase from "firebase";
